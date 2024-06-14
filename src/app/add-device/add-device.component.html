@@ -1,0 +1,115 @@
+<div class="container">
+    <header>
+      <h2>Thêm thiết bị mới</h2>
+      <button class="close-btn" (click)="close()">X</button>
+    </header>
+    <main>
+      <div class="left-pane">
+        <div class="form-container">
+          <div class="form-group">
+            <label for="searchDevice">Chọn:</label>
+            <input type="text" id="searchDevice" name="searchDevice" placeholder="Tìm kiếm tên thiết bị">
+          </div>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="deviceName">Tên thiết bị:</label>
+              <input type="text" id="deviceName" name="deviceName">
+            </div>
+            <div class="form-group">
+              <label for="deviceIP">Địa chỉ IP:</label>
+              <input type="text" id="deviceIP" name="deviceIP">
+            </div>
+            <div class="form-group">
+              <label for="deviceType">Loại thiết bị:</label>
+              <input type="text" id="deviceType" name="deviceType">
+            </div>
+            <div class="form-group">
+              <label for="deviceCode">Mã thiết bị:</label>
+              <input type="text" id="deviceCode" name="deviceCode">
+            </div>
+            <div class="form-group">
+              <label for="deviceCommand">Lệnh:</label>
+              <input type="text" id="deviceCommand" name="deviceCommand">
+            </div>
+            <div class="form-group">
+              <label for="subnetMask">Subnet mask:</label>
+              <input type="text" id="subnetMask" name="subnetMask">
+            </div>
+            <div class="form-group">
+              <label for="manufacturer">Nhà sản xuất:</label>
+              <input type="text" id="manufacturer" name="manufacturer">
+            </div>
+          </div>
+        </div>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Thiết bị</th>
+                <th>Chọn</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let device of devices; let i = index">
+                <td>{{ device.name }}</td>
+                <td><input type="checkbox" [(ngModel)]="device.selected"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagination-container">
+          <div class="pagination-info">
+            Hiển thị <input type="number" [(ngModel)]="itemsPerPage" min="1" max="100"> / Trên {{devices.length}} Thiết bị
+          </div>
+          <div class="pagination">
+            <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">«</button>
+            <button *ngFor="let page of totalPages" (click)="changePage(page)" [ngClass]="{'active': page === currentPage}">
+              {{page}}
+            </button>
+            <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages.length">»</button>
+          </div>
+        </div>
+        <div class="button-group">
+          <button class="action-btn edit-btn">Sửa</button>
+          <button class="action-btn add-btn">Thêm mới</button>
+          <button class="action-btn delete-btn">Xóa</button>
+        </div>
+      </div>
+      <div class="right-pane">
+        <!-- Danh sách thiết bị -->
+        <div class="table-container">
+          <h3>Danh sách thiết bị</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>STT</th>
+                <th>Tên thiết bị</th>
+                <th>Mã thiết bị</th>
+                <th>Nhà sản xuất</th>
+                <th>Địa chỉ IP</th>
+                <th>Subnet Mask</th>
+                <th>Lệnh</th>
+                <th>Thao tác</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let device of devices; let i = index">
+                <td>{{ i + 1 }}</td>
+                <td>{{ device.name }}</td>
+                <td>{{ device.code }}</td>
+                <td>{{ device.manufacturer }}</td>
+                <td>{{ device.ip }}</td>
+                <td>{{ device.subnetmask }}</td>
+                <td>{{ device.command }}</td>
+                <td>
+                  <button class="action-btn view-btn"><i class="fas fa-eye"></i></button>
+                  <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+  

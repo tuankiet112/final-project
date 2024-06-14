@@ -1,0 +1,71 @@
+<div class="container">
+  <header>
+    <div class="logo-container">
+      <img src="assets/images/avt.png" alt="VNPT ICS Logo" class="logo">
+      <h1>VNPT ICS</h1>
+    </div>
+    <div class="user-info">
+      <img src="assets/images/admin.jpg" alt="Admin Avatar" class="avatar">
+      <span class="username">admin</span>
+      <div class="dropdown">
+        <button class="dropbtn">&#9660;</button>
+        <div class="dropdown-content">
+          <a href="#">Tài khoản nhân viên</a>
+          <a href="#" (click)="logout()">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <nav>
+      <ul>
+        <li><a routerLink="/home"><i class="fas fa-home icon"></i><span>Trang chủ</span></a></li>
+        <li><a routerLink="/manufacturer"><i class="fas fa-industry icon"></i><span>Nhà sản xuất</span></a></li>
+        <li><a routerLink="/type"><i class="fas fa-tags icon"></i><span>Loại</span></a></li>
+        <li><a routerLink="/subnetmask"><i class="fas fa-network-wired icon"></i><span>Subnet Mask</span></a></li>
+        <li><a routerLink="/command"><i class="fas fa-tasks icon"></i><span>Lệnh</span></a></li>
+        <li><a routerLink="/admin"><i class="fas fa-cogs icon"></i><span>Quản trị</span></a></li>
+      </ul>
+      <div class="bottom-nav">
+        <p>Thông tin liên hệ</p>
+        <button (click)="logout()">Đăng xuất</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="header-bar">
+        <button class="back-button" (click)="navigateTo('/home')"><i class="fas fa-arrow-left"></i> Trở về</button>
+        <h2>Quản trị</h2>
+      </div>
+      <table class="admin-table">
+        <thead>
+          <tr>
+            <th>Tên người dùng</th>
+            <th>Email</th>
+            <th>Vai trò</th>
+            <th>Trạng thái</th>
+            <th>Ngày Tạo</th>
+            <th>Ghi chú</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.role }}</td>
+            <td>{{ user.status }}</td>
+            <td>{{ user.createdDate }}</td>
+            <td>{{ user.notes }}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="actions">
+        <button class="btn primary" (click)="addUser()">Thêm</button>
+        <button class="btn secondary" (click)="editUser()">Sửa</button>
+        <button class="btn danger" (click)="deleteUser()">Xóa</button>
+        <button class="btn success" (click)="save()">Lưu</button>
+      </div>
+    </main>
+  </div>
+</div>

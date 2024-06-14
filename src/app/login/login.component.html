@@ -1,0 +1,27 @@
+<div class="login-container">
+  <div class="logo">
+    <img src="assets/images/avt.png" alt="Logo">
+  </div>
+  <div class="login-box">
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+      <h2>Đăng Nhập</h2>
+      <div class="form-group">
+        <label for="valuserName"><i class="fas fa-user"></i></label>
+        <input type="text" id="valuserName" name="userName" placeholder="Nhập Tên Đăng Nhập" [(ngModel)]="username" required>
+      </div>
+      <div class="form-group">
+        <label for="valpassWord"><i class="fas fa-lock"></i></label>
+        <input type="password" id="valpassWord" name="passWord" placeholder="Nhập Mật Khẩu" [(ngModel)]="password" required>
+      </div>
+
+      <div class="rememberMe">
+        <input type="checkbox" name="rememberMe" id="rememberMe" [(ngModel)]="rememberMe">
+        <label for="rememberMe">Nhớ Mật Khẩu</label>
+      </div>
+      <div class="submit">
+        <button type="submit" [disabled]="!loginForm.valid">Đăng Nhập</button>
+      </div>
+      <span id="disError">{{ errorMsg }}</span>
+    </form>
+  </div>
+</div>

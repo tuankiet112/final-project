@@ -1,0 +1,90 @@
+<div class="container">
+  <header>
+    <div class="logo-container">
+      <img src="assets/images/avt.png" alt="VNPT ICS Logo" class="logo">
+      <h1>VNPT ICS</h1>
+    </div>
+    <div class="user-info">
+      <img src="assets/images/admin.jpg" alt="Admin Avatar" class="avatar">
+      <span class="username">admin</span>
+      <div class="dropdown">
+        <button class="dropbtn">&#9660;</button>
+        <div class="dropdown-content">
+          <a href="#" (click)="logout()">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="main-content">
+    <nav>
+      <ul>
+        <li><a (click)="navigateTo('/home')"><i class="fas fa-home icon"></i><span>Trang chủ</span></a></li>
+        <li><a (click)="navigateTo('/manufacturer')"><i class="fas fa-industry icon"></i><span>Nhà sản xuất</span></a></li>
+        <li><a (click)="navigateTo('/type')"><i class="fas fa-tags icon"></i><span>Loại</span></a></li>
+        <li><a (click)="navigateTo('/subnetmask')"><i class="fas fa-network-wired icon"></i><span>Subnet Mask</span></a></li>
+        <li><a (click)="navigateTo('/command')"><i class="fas fa-tasks icon"></i><span>Lệnh</span></a></li>
+        <li><a (click)="navigateTo('/admin')"><i class="fas fa-cogs icon"></i><span>Quản trị</span></a></li>
+      </ul>
+      <div class="bottom-nav">
+        <p>Thông tin liên hệ</p>
+        <button (click)="logout()">Đăng xuất</button>
+      </div>
+    </nav>
+
+    <main>
+      <div class="header-bar">
+        <button class="back-button" (click)="goBack()"><i class="fas fa-arrow-left"></i> Trở lại</button>
+        <h2>Chi tiết thiết bị</h2>
+      </div>
+      <div class="device-detail">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Mã Thiết bị:</label>
+            <input type="text" [(ngModel)]="device.code" disabled>
+          </div>
+          <div class="form-group">
+            <label>Tên thiết bị:</label>
+            <input type="text" [(ngModel)]="device.name" disabled>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nhà sản xuất:</label>
+            <input type="text" [(ngModel)]="device.manufacturer" disabled>
+          </div>
+          <div class="form-group">
+            <label>Loại thiết bị:</label>
+            <input type="text" [(ngModel)]="device.type" disabled>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Lệnh:</label>
+            <input type="text" [(ngModel)]="device.command" disabled>
+          </div>
+          <div class="form-group">
+            <label>Subnet mask:</label>
+            <input type="text" [(ngModel)]="device.subnetmask" disabled>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Trạng thái:</label>
+            <input type="text" [(ngModel)]="device.status" disabled>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Thông số kỹ thuật cấu hình:</label>
+          <textarea [(ngModel)]="device.configDetails"></textarea>
+        </div>
+        <div class="actions">
+          <button class="save" (click)="save()">Lưu</button>
+          <button class="edit" (click)="edit()">Sửa</button>
+          <button class="cancel" (click)="cancel()">Hủy</button>
+          <button class="go-back" (click)="goBack()">Đóng</button>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>

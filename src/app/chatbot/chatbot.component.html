@@ -1,0 +1,23 @@
+<div class="chatbot-container" [class.collapsed]="collapsed">
+  <div class="chat-header" (click)="toggleChat()">
+    Chatbot
+  </div>
+  <div class="chat-content" *ngIf="!collapsed">
+    <div class="messages">
+      <div *ngFor="let message of messages" [ngClass]="{'employee-message': message.sender === 'Employee', 'admin-message': message.sender === 'Admin', 'autobot-message': message.sender === 'AutoBot'}" class="message">
+        <strong>{{ message.sender }}:</strong> {{ message.text }}
+      </div>
+    </div>
+    <div class="input-container">
+      <input [(ngModel)]="messageContent" (keyup.enter)="sendMessage()" placeholder="Nhập tin nhắn..." />
+      <button (click)="sendMessage()">Gửi</button>
+    </div>
+    <div class="role-switch">
+      <button (click)="switchSender('Admin')">Admin</button>
+      <button (click)="switchSender('Employee')">Employee</button>
+    </div>
+  </div>
+  <div class="chat-icon" *ngIf="collapsed" (click)="toggleChat()">
+    💬
+  </div>
+</div>

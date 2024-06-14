@@ -1,0 +1,297 @@
+[
+  {
+    "id": 1,
+    "name": "The Dark Knight",
+    "cover": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...",
+    "rating": 4.25,
+    "reviews": [
+      {
+        "author": "John Kramer",
+        "published_on": "2021-11-18 11:37:19",
+        "review": "Awesome movie!",
+        "rating": 4.5
+      },
+      {
+        "author": "Harry Potter",
+        "published_on": "2021-10-13 10:16:39",
+        "review": "Nice movie to watch in theatre!",
+        "rating": 4.0
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": 1,
+        "title": "Episode 1",
+        "duration": "45min",
+        "release_date": "2023-05-20"
+      },
+      {
+        "episode_id": 2,
+        "title": "Episode 2",
+        "duration": "50min",
+        "release_date": "2023-05-27"
+      }
+    ],
+    "cast": [
+      {
+        "actor_id": 1,
+        "name": "Christian Bale",
+        "character": "Bruce Wayne",
+        "birth_date": "1974-01-30"
+      },
+      {
+        "actor_id": 2,
+        "name": "Heath Ledger",
+        "character": "Joker",
+        "birth_date": "1979-04-04"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Inception",
+    "cover": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...",
+    "rating": 4.15,
+    "reviews": [],
+    "episodes": [
+      {
+        "episode_id": 1,
+        "title": "Episode 1",
+        "duration": "50min",
+        "release_date": "2023-05-20"
+      },
+      {
+        "episode_id": 2,
+        "title": "Episode 2",
+        "duration": "55min",
+        "release_date": "2023-05-27"
+      }
+    ],
+    "cast": [
+      {
+        "actor_id": 1,
+        "name": "Leonardo DiCaprio",
+        "character": "Dom Cobb",
+        "birth_date": "1974-11-11"
+      },
+      {
+        "actor_id": 2,
+        "name": "Joseph Gordon-Levitt",
+        "character": "Arthur",
+        "birth_date": "1981-02-17"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Matrix",
+    "cover": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...",
+    "rating": 4.13,
+    "reviews": [
+      {
+        "author": "Ron Weasley",
+        "published_on": "2021-10-11 11:57:39",
+        "review": "Good but confusing",
+        "rating": 4.0
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": 1,
+        "title": "Episode 1",
+        "duration": "45min",
+        "release_date": "2023-05-20"
+      },
+      {
+        "episode_id": 2,
+        "title": "Episode 2",
+        "duration": "50min",
+        "release_date": "2023-05-27"
+      }
+    ],
+    "cast": [
+      {
+        "actor_id": 1,
+        "name": "Keanu Reeves",
+        "character": "Neo",
+        "birth_date": "1964-09-02"
+      },
+      {
+        "actor_id": 2,
+        "name": "Laurence Fishburne",
+        "character": "Morpheus",
+        "birth_date": "1961-07-30"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Shawshank Redemption",
+    "cover": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...",
+    "rating": 4.12,
+    "reviews": [
+      {
+        "author": "John Kramer",
+        "published_on": "2020-10-23 11:27:39",
+        "review": "Awesome movie!",
+        "rating": 4.5
+      },
+      {
+        "author": "Hermione Granger",
+        "published_on": "2021-10-11 11:27:39",
+        "review": "Very good movie to watch!",
+        "rating": 4.0
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": 1,
+        "title": "Episode 1",
+        "duration": "45min",
+        "release_date": "2023-05-20"
+      },
+      {
+        "episode_id": 2,
+        "title": "Episode 2",
+        "duration": "50min",
+        "release_date": "2023-05-27"
+      }
+    ],
+    "cast": [
+      {
+        "actor_id": 1,
+        "name": "Tim Robbins",
+        "character": "Andy Dufresne",
+        "birth_date": "1958-10-16"
+      },
+      {
+        "actor_id": 2,
+        "name": "Morgan Freeman",
+        "character": "Ellis Boyd 'Red' Redding",
+        "birth_date": "1937-06-01"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Avatar",
+    "cover": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD...",
+    "rating": 4.53,
+    "reviews": [
+      {
+        "author": "Peter Pettigrew",
+        "published_on": "2020-10-13 11:27:39",
+        "review": "Nice graphics!",
+        "rating": 4.5
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": 1,
+        "title": "Episode 1",
+        "duration": "45min",
+        "release_date": "2023-05-20"
+      },
+      {
+        "episode_id": 2,
+        "title": "Episode 2",
+        "duration": "50min",
+        "release_date": "2023-05-27"
+      }
+    ],
+    "cast": [
+      {
+        "actor_id": 1,
+        "name": "Sam Worthington",
+        "character": "Jake Sully",
+        "birth_date": "1976-08-02"
+      },
+      {
+        "actor_id": 2,
+        "name": "Zoe Saldana",
+        "character": "Neytiri",
+        "birth_date": "1978-06-19"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "The Lord of the Rings",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo-o2-B9X-yH6SrKcaCvMENrG5vxXtUYhrK9CrPnk8Hmg-A6xBYi5WfP6pmHY&s=10",
+    "rating": 4.15,
+    "reviews": [
+      {
+        "author": "Sirius Black",
+        "published_on": "2021-10-13 11:37:29",
+        "review": "Lengthy movie",
+        "rating": 3.5
+      }
+    ],
+    "episodes": [
+      {
+        "episode_id": 1,
+        "title": "Episode 1",
+        "duration": "45min",
+        "release_date": "2023-05-20"
+      },
+      {
+        "episode_id": 2,
+        "title": "Episode 2",
+        "duration": "50min",
+        "release_date": "2023-05-27"
+      }
+    ],
+    "cast": [
+      {
+        "actor_id": 1,
+        "name": "Elijah Wood",
+        "character": "Frodo Baggins",
+        "birth_date": "1981-01-28"
+      },
+      {
+        "actor_id": 2,
+        "name": "Ian McKellen",
+        "character": "Gandalf",
+        "birth_date": "1939-05-25"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Gladiator",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEBhwDpB08O2L5mZ0WIARuXUznGjMFj7k3vEwnrHqXYMcTXlWegX9r3s6NOs8&s=10",
+    "rating": 4.35,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Titanic",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR09mQFG3dBHrT5KSKTYnM5Yn-jcPARe55m609vxJxsEDd2woemRHd6tCj8zuw&s=10",
+    "rating": 4.15,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Terminator",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEo9aGDRBw2X5YbUe-5SfkJsmlqtUse1oFzBJo2ji3USxzmWCtgURsaDV0HJU&s=10",
+    "rating": 4.22,
+    "reviews": [
+    ]
+  },
+  {
+    "id": 10,
+    "name": "The Dark Knight Rises",
+    "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmeiv7vWzpOrVy3YoXrMAyCjYBoMgel_Tl0LUmzdziNlEkxhWLLbFK_tItdgo&s=10",
+    "rating": 4.45,
+    "reviews": [
+      {
+        "author": "Lilly Potter",
+        "published_on": "2021-10-10 11:27:39",
+        "review": "Awesome movie!",
+        "rating": 4.5
+      }
+    ]
+  }
+]

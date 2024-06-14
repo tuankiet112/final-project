@@ -1,0 +1,17 @@
+version: '3'
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: final-project-angular-app
+    ports:
+      - "80:80"
+
+  websocket-server:
+    build:
+      context: .
+      dockerfile: Dockerfile.websocket
+    container_name: final-project-websocket-server
+    ports:
+      - "3000:3000"
